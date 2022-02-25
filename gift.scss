@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: black;
+}
+svg{
+    margin-top: 200px;
+    //padding:90px;
+    //border:1px solid white;
+}
+#monster1{
+    animation: monsterA 1s ease-in;
+    animation-delay:1s ;
+    transform-origin: center;
+    transform-box: fill-box;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+
+}
+#monster2{
+    animation: monsterB 1s linear;
+    animation-delay:1s ;
+    transform:translateX(-400px);
+    transform-box: fill-box;
+    //opacity: 0;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+
+
+}
+
+#small-box-lid{
+    animation:lid 1s ease-out ;
+    position: absolute;
+    transform-origin:right;
+    animation-fill-mode: forwards;
+    
+
+
+
+}
+@keyframes lid{
+    from{
+        transform:rotateZ(0);
+
+    }
+    to{
+        transform: translateY(-30px)rotateZ(30deg)translateX(38px);
+    }
+}
+@keyframes monsterA{
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+
+    }
+    
+    to{
+        transform:rotateZ(360deg);
+        opacity:1;
+    }
+   
+}
+@keyframes monsterB{
+    from{
+        transform:translateX(-400px);
+
+
+    }
+    
+    to{
+        transform: translateX(0) rotateZ(360deg); 
+    }
+}
