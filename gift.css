@@ -17,8 +17,8 @@ svg {
 #monster1 {
   -webkit-animation: monsterA 1s ease-in;
           animation: monsterA 1s ease-in;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -30,8 +30,8 @@ svg {
 #monster2 {
   -webkit-animation: monsterB 1s linear;
           animation: monsterB 1s linear;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-transform: translateX(-400px);
           transform: translateX(-400px);
   transform-box: fill-box;
@@ -41,9 +41,20 @@ svg {
           transform-origin: center;
 }
 
+#monster3 {
+  -webkit-animation: monsterC 2s linear;
+          animation: monsterC 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
 #small-box-lid {
-  -webkit-animation: lid 1s ease-out;
-          animation: lid 1s ease-out;
+  -webkit-animation: lid 2s ease-out;
+          animation: lid 2s ease-out;
   position: absolute;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -118,6 +129,44 @@ svg {
   to {
     -webkit-transform: translateX(0) rotateZ(360deg);
             transform: translateX(0) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes monsterC {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-30px);
+            transform: scale(1) translateY(-30px);
+  }
+  85% {
+    -webkit-transform: scale(1) translateY(20px);
+            transform: scale(1) translateY(20px);
+  }
+  to {
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+
+@keyframes monsterC {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-30px);
+            transform: scale(1) translateY(-30px);
+  }
+  85% {
+    -webkit-transform: scale(1) translateY(20px);
+            transform: scale(1) translateY(20px);
+  }
+  to {
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
   }
 }
 /*# sourceMappingURL=gift.css.map */
