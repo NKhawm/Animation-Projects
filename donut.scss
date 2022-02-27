@@ -1,3 +1,10 @@
+$colorb:#45b2de;
+$colorp:#FF6584;
+$colory:#ECBB0D;
+$colorP:#9867C5;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@300&family=Poppins:wght@200&family=Redressed&family=Sirin+Stencil&display=swap');
 *{
     margin:0;
     padding:0;
@@ -12,8 +19,9 @@ body{
     border-radius: 10px;
 }
 svg{
-    
-    margin:10px;
+    max-height: 60vh;
+    //padding-bottom: 50px;
+    margin-top:-20px;
     opacity:0;
     animation: svgani 2s linear;
     animation-fill-mode: forwards;
@@ -25,31 +33,53 @@ radialGradient{
     opacity:0;
 }
 #big-donut{
-    animation:bDonut 1s ease-out;
+    animation:bDonut 1s ease-out ;
     transform-origin: center;
     transform-box: fill-box;
     animation-delay: 1s;
     opacity:0;
     animation-fill-mode: forwards;
+    
 
 }
+
 #medium2-donut{
-    animation:mdonut2 1.5s linear;
+    animation:mdonut2 1.5s linear ;
     position: relative;
     animation-delay:2s ;
     animation-fill-mode: forwards;
+
+    
 }
+
+
 #medium1-donut{
-    animation:mdonut1 1.5s ease-in-out;
+    animation:mdonut1 1.5s ease-in-out ;
     position: relative;
-    animation-delay:3.5s ;
+    animation-delay:3.5s;
 }
 #small-donut{
-    animation:mdonut3 1.5s linear;
+    animation:mdonut3 1.5s linear ;
     position: relative;
     animation-delay:2s ;
     animation-fill-mode: forwards;
 
+}
+.coffee{
+    font-size: 2em;
+    //position:absolute;
+    display: flex;
+    justify-content:flex-end;
+    margin-top:-40px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    font-family: 'Sirin Stencil', cursive;
+    gap:10px;
+    animation: coffee 2s linear infinite;
+}
+.fa-solid{
+    position: relative;
+    font-size: 40px;
 }
 
 @keyframes svgani{
@@ -137,21 +167,102 @@ radialGradient{
     }
 
 }
+@keyframes coffee{
+    from{
+        transform:rotateZ(0);
+        color:$colorp;
+    }
+    25%{
+        transform:rotateZ(0);
+        color:$colory;
+        
+    }
+    50%{
+        transform:rotateZ(0);
+        color:$colorb;
+       } 
+    75%{
+        transform:rotateZ(0);
+        color:$colorp;
+         } 
+    95%{
+        transform:rotateZ(0);
+        color:$colory;
+         }
+   
+    to{
+        transform:rotateZ(0);
+        color:$colorb;
+         }
+
+}
+
+
+
 section{
-    background-color:#45b2de;
+   background: url(bgpic.jpg);
+   background-size: cover;
+   // background-color:cadetblue;
     margin:20px;
     border-radius: 20px;
 }
 h1{
     font-size: 2em;
+    padding-top: 20px;
     
 }
 .text-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding:40px;
+    gap: 40px;
+    
+    h2{
+      padding-bottom: 20px;
+    }
 
 }
+.text1{
+    grid-column:1;
+    grid-row:1;
+    font-size: 20px;
+    border:4px solid white;
+    border-radius: 100px  0 100px 0;
+    padding:20px;
+}
+.text2{
+       grid-column: 2;
+      grid-row:span 2;
+      //padding:10px;
+      font-size: 20px;
+      padding-left: 30px;
+      padding-top:40px;
+      border:4px solid white;
+    border-radius: 100px 0 100px 0;
+     padding:100px 20px;
+}
+.text3{
+    grid-column: 1;
+    grid-row:2;
+    font-size: 20px;
+    border:4px solid white;
+    border-radius: 0 100px 0 100px;
+     padding:20px;
+    
+}
 footer{
-    background-color: white;
+    background:url(bgpic.jpg);
+    margin: 20px;
+    border-radius: 20px;
+    padding:40px;
+    ul{
+        display:flex;
+        justify-content: space-evenly;
+       li  {
+            list-style: none;
+        }
+        
+    }
+   
+
 }

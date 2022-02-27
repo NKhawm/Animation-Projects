@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@300&family=Poppins:wght@200&family=Redressed&family=Sirin+Stencil&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,8 @@ body {
 }
 
 svg {
-  margin: 10px;
+  max-height: 60vh;
+  margin-top: -20px;
   opacity: 0;
   -webkit-animation: svgani 2s linear;
           animation: svgani 2s linear;
@@ -66,6 +68,28 @@ radialGradient {
           animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.coffee {
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -40px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  font-family: 'Sirin Stencil', cursive;
+  gap: 10px;
+  -webkit-animation: coffee 2s linear infinite;
+          animation: coffee 2s linear infinite;
+}
+
+.fa-solid {
+  position: relative;
+  font-size: 40px;
 }
 
 @-webkit-keyframes svgani {
@@ -270,14 +294,82 @@ radialGradient {
   }
 }
 
+@-webkit-keyframes coffee {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #FF6584;
+  }
+  25% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #ECBB0D;
+  }
+  50% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #45b2de;
+  }
+  75% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #FF6584;
+  }
+  95% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #ECBB0D;
+  }
+  to {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #45b2de;
+  }
+}
+
+@keyframes coffee {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #FF6584;
+  }
+  25% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #ECBB0D;
+  }
+  50% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #45b2de;
+  }
+  75% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #FF6584;
+  }
+  95% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #ECBB0D;
+  }
+  to {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+    color: #45b2de;
+  }
+}
+
 section {
-  background-color: #45b2de;
+  background: url(bgpic.jpg);
+  background-size: cover;
   margin: 20px;
   border-radius: 20px;
 }
 
 h1 {
   font-size: 2em;
+  padding-top: 20px;
 }
 
 .text-container {
@@ -286,9 +378,64 @@ h1 {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   padding: 40px;
+  gap: 40px;
+}
+
+.text-container h2 {
+  padding-bottom: 20px;
+}
+
+.text1 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-size: 20px;
+  border: 4px solid white;
+  border-radius: 100px  0 100px 0;
+  padding: 20px;
+}
+
+.text2 {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  grid-row: span 2;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-top: 40px;
+  border: 4px solid white;
+  border-radius: 100px 0 100px 0;
+  padding: 100px 20px;
+}
+
+.text3 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-size: 20px;
+  border: 4px solid white;
+  border-radius: 0 100px 0 100px;
+  padding: 20px;
 }
 
 footer {
-  background-color: white;
+  background: url(bgpic.jpg);
+  margin: 20px;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer ul li {
+  list-style: none;
 }
 /*# sourceMappingURL=donut.css.map */
